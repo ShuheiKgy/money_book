@@ -35,12 +35,12 @@ const MoneyBookItem = (props) => {
             <td>{date}</td>
             <td>{item}</td>
             <td>{amount >= 0 ? amount : null}</td>
-            <td>{amount < 0 ? amount : null}</td>
+            <td>{amount < 0 ? -amount : null}</td>
         </tr>
     )
 }
 
-MoneyBookItem.PropTypes = {
+MoneyBookItem.propTypes = {
     book: PropTypes.object.isRequired
 }
 
@@ -48,7 +48,7 @@ const Title = (props) => {
     return (<h1>{props.children}</h1>)
 }
 
-Title.PropTypes = {
+Title.propTypes = {
     children: PropTypes.string
 }
 
